@@ -6,7 +6,7 @@ const validator = (req, res, next) => {
   let { name } = req.query;
   try {
     if (name) {
-      req.status(200).send({
+      res.status(200).send({
         name: name,
       });
     } else {
