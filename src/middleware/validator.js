@@ -3,6 +3,7 @@
 const serverError = require('../error-handlers/500');
 
 const validator = (req, res, next) => {
+  // console.log('hello')
   let { name } = req.query;
   try {
     if (name) {
@@ -16,5 +17,7 @@ const validator = (req, res, next) => {
     next(error.message);
   }
 };
+
+
 
 module.exports = validator;
